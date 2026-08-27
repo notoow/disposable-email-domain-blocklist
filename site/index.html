@@ -58,6 +58,12 @@ node cli/dist/bin.js check user@gmail.com --json</code></pre>
       <p>The current seed blocks <code>vtmpj.com</code> and its subdomains. An unlisted <code>gmail.com</code> result is allowed. See the <a href="disposable-email-checker/">checker guide</a> for the stable JSON contract.</p>
     </section>
 
+    <section aria-labelledby="blocked"><h2 id="blocked">Which disposable email domains are blocked?</h2>
+      <div class="answer"><strong>Current verified blocklist:</strong> <code>vtmpj.com</code> and any subdomain such as <code>mail.vtmpj.com</code>. This initial release intentionally publishes only independently evidenced records; it is not presented as an exhaustive list yet.</div>
+      <table><thead><tr><th>Domain</th><th>Match</th><th>Classification</th><th>Confidence</th><th>Evidence</th></tr></thead><tbody><tr><td><code>vtmpj.com</code></td><td>exact + subdomains</td><td>disposable</td><td>high</td><td><a href="https://verifymail.io/domain/vtmpj.com">VerifyMail report</a></td></tr></tbody></table>
+      <p class="muted">The canonical machine-readable list is <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/data/domains.txt">domains.txt</a>; records not marked active disposable with medium/high confidence are not blocked by default.</p>
+    </section>
+
     <section aria-labelledby="integrations"><h2 id="integrations">Integration guides</h2>
       <div class="grid">
         <article class="card"><h3><a href="supabase-disposable-email-blocker/">Supabase disposable email blocker</a></h3><p>Preview a private-schema, RLS-protected Before User Created migration. No remote database is changed by the generator.</p></article>
@@ -77,4 +83,3 @@ node cli/dist/bin.js check user@gmail.com --json</code></pre>
   <footer>Disposable Email Domain Blocklist · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/CONTRIBUTING.md">Contribute evidence</a> · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/SECURITY.md">Security</a></footer>
 </body>
 </html>
-

@@ -18,6 +18,14 @@ for (const path of requiredPages) {
   if (!html.includes('Disposable Email')) throw new Error(`${path}: missing product phrase`)
 }
 
+const homepage = await readFile('site/index.html', 'utf8')
+if (!homepage.includes('Which disposable email domains are blocked?')) {
+  throw new Error('homepage: missing visible blocked-domain section')
+}
+if (!homepage.includes('<code>vtmpj.com</code>')) {
+  throw new Error('homepage: missing current blocked domain')
+}
+
 const robots = await readFile('site/robots.txt', 'utf8')
 const sitemap = await readFile('site/sitemap.xml', 'utf8')
 if (!robots.includes(`${baseUrl}sitemap.xml`)) throw new Error('robots.txt: missing sitemap URL')
@@ -26,4 +34,3 @@ for (const path of requiredPages) {
   if (!sitemap.includes(`${baseUrl}${route}`)) throw new Error(`sitemap.xml: missing ${route}`)
 }
 console.log(`Site check passed for ${requiredPages.length} pages.`)
-
