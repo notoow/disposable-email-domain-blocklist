@@ -1,14 +1,39 @@
 {
   "schema_version": 1,
   "sources": [
-    {
-      "url": "https://verifymail.io/domain/vtmpj.com",
-      "publisher": "VerifyMail",
-      "evidence_type": "provider_attribution",
-      "checked_at": "2026-08-27",
-      "redistribution_review": "record_facts_only",
-      "note": "The domain page identifies vtmpj.com as disposable and attributes it to 10minutemail.com. No third-party bulk list was copied."
-    }
+    {"url":"https://10minutemail.com/about.html","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://10minutemail.one/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://bulkemailchecker.com/verify/domain/crazymailing.com/","publisher":"BulkEmailChecker","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://deviceandbrowserinfo.com/data/emails/domain/details/kuku.lu","publisher":"DeviceAndBrowserInfo","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://dustbin.one/page/privacy-policy","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://gatekeepr.io/disposable-email-data/10minutemail.com","publisher":"Gatekeepr","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://hypestat.com/info/temp-mail.sh","publisher":"HypeStat","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://lisemala.com/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://mailinator.com/documentation/docs/core/publicmailbox/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://moakt.com/en/terms","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://nicemail.cc/ar","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://snaper24.com/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://temp-mail.io/en","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://temp-mail.org/en","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/gonrr.net","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/guerrillamail.com","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/guerrillamail.de","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/guerrillamail.net","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/guerrillamail.org","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/guerrillamailblock.com","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/jbsze.com","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/jetable.org","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/kjkpc.net","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/onldm.net","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/vtmpj.com","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://verifymail.io/domain/vtmpj.net","publisher":"VerifyMail","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://with.lt/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://www.emailnator.com/term-of-use","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://www.mailboxvalidator.com/domain/cazlp.com","publisher":"MailboxValidator","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://www.mailboxvalidator.com/domain/vhm.cc","publisher":"MailboxValidator","evidence_type":"candidate_review","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Current check reports vhm.cc as not disposable; retained as disputed and not blocked."},
+    {"url":"https://www.mohmal.com/en","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://www.usercheck.com/domain/jjk.app","publisher":"UserCheck","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://www.usercheck.com/provider/tempo.mintraccoon.com","publisher":"UserCheck","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."},
+    {"url":"https://yopmail.com/","publisher":"Operator website","evidence_type":"provider_attribution","checked_at":"2026-08-27","redistribution_review":"record_facts_only","note":"Public domain/provider evidence checked for this dataset record."}
   ]
 }
-

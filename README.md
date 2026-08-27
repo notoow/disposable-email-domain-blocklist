@@ -11,7 +11,7 @@ node cli/dist/bin.js check user@vtmpj.com
 node cli/dist/bin.js check user@gmail.com --json
 ```
 
-`vtmpj.com` is blocked by the initial evidence-backed seed. An unlisted domain such as `gmail.com` is allowed by default. A blocked result is a valid decision and exits `0`; malformed input exits `2`.
+The current evidence-backed seed blocks 33 active disposable domains, including `10minutemail.com`, `guerrillamail.com`, `mailinator.com`, `temp-mail.org`, `vtmpj.com`, and `yopmail.com`, plus their subdomains. An unlisted domain such as `gmail.com` is allowed by default. A blocked result is a valid decision and exits `0`; malformed input exits `2`. See the full list in [`data/domains.txt`](data/domains.txt).
 
 ## Supabase preview
 

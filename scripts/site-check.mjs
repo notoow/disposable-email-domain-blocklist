@@ -22,9 +22,11 @@ const homepage = await readFile('site/index.html', 'utf8')
 if (!homepage.includes('Which disposable email domains are blocked?')) {
   throw new Error('homepage: missing visible blocked-domain section')
 }
-if (!homepage.includes('<code>vtmpj.com</code>')) {
-  throw new Error('homepage: missing current blocked domain')
+for (const domain of ['10minutemail.com', 'guerrillamail.com', 'mailinator.com', 'temp-mail.org', 'vtmpj.com', 'yopmail.com']) {
+  if (!homepage.includes(`<code>${domain}</code>`)) throw new Error(`homepage: missing current blocked domain ${domain}`)
 }
+if (!homepage.includes('33 active domains')) throw new Error('homepage: missing current blocked-domain count')
+if (!homepage.includes('vhm.cc') || !homepage.includes('imail7.net')) throw new Error('homepage: missing disputed review candidates')
 
 const robots = await readFile('site/robots.txt', 'utf8')
 const sitemap = await readFile('site/sitemap.xml', 'utf8')

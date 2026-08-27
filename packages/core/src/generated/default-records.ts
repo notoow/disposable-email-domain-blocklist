@@ -3,14 +3,488 @@ import type { DomainRecord } from '../types.js'
 
 export const DEFAULT_DOMAIN_RECORDS = [
   {
+    "domain": "10minutemail.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://10minutemail.com/about.html"
+    ],
+    "evidence_note": "The operator describes 10minutemail.com as a temporary, anonymous, self-destructing email service.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "10minutemail.one",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://10minutemail.one/"
+    ],
+    "evidence_note": "The service states that addresses self-destruct after 10 minutes and are created without registration.",
+    "provider": "10minutemail.one",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "cazlp.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://www.mailboxvalidator.com/domain/cazlp.com"
+    ],
+    "evidence_note": "MailboxValidator currently classifies cazlp.com as an active disposable email domain.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "crazymailing.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://bulkemailchecker.com/verify/domain/crazymailing.com/"
+    ],
+    "evidence_note": "BulkEmailChecker currently classifies crazymailing.com as a disposable service with short-lived mailboxes.",
+    "provider": "tempmailbox.net",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "dustbin.one",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://dustbin.one/page/privacy-policy"
+    ],
+    "evidence_note": "The operator describes Dustbin.one as a free disposable email service whose inboxes reset hourly.",
+    "provider": "dustbin.one",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "emailnator.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://www.emailnator.com/term-of-use"
+    ],
+    "evidence_note": "Emailnator's terms describe Gmailnator as providing temporary, disposable email addresses.",
+    "provider": "Emailnator/Gmailnator",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "gonrr.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/gonrr.net"
+    ],
+    "evidence_note": "VerifyMail identifies gonrr.net as disposable and attributes its MX infrastructure to 10minutemail.com.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "guerrillamail.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/guerrillamail.com"
+    ],
+    "evidence_note": "VerifyMail identifies guerrillamail.com as disposable and attributes it to Guerrilla Mail.",
+    "provider": "Guerrilla Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "guerrillamail.de",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/guerrillamail.de"
+    ],
+    "evidence_note": "VerifyMail identifies guerrillamail.de as disposable and attributes it to Guerrilla Mail.",
+    "provider": "Guerrilla Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "guerrillamail.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/guerrillamail.net"
+    ],
+    "evidence_note": "VerifyMail identifies guerrillamail.net as disposable and attributes it to Guerrilla Mail.",
+    "provider": "Guerrilla Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "guerrillamail.org",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/guerrillamail.org"
+    ],
+    "evidence_note": "VerifyMail identifies guerrillamail.org as disposable and attributes it to Guerrilla Mail.",
+    "provider": "Guerrilla Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "guerrillamailblock.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/guerrillamailblock.com"
+    ],
+    "evidence_note": "VerifyMail identifies guerrillamailblock.com as disposable and attributes it to Guerrilla Mail.",
+    "provider": "Guerrilla Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "imail7.net",
+    "classification": "unknown",
+    "confidence": "low",
+    "source_urls": [],
+    "evidence_note": "The submitted hostname was not confirmed as a disposable provider; retained as a low-confidence review candidate and not blocked.",
+    "provider": null,
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "disputed"
+  },
+  {
+    "domain": "jbsze.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/jbsze.com"
+    ],
+    "evidence_note": "VerifyMail identifies jbsze.com as disposable and attributes its MX infrastructure to 10minutemail.com.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "jbsze.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://gatekeepr.io/disposable-email-data/10minutemail.com"
+    ],
+    "evidence_note": "Gatekeepr lists jbsze.net among the current domains served by the 10minutemail.com disposable provider.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "jetable.org",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/jetable.org"
+    ],
+    "evidence_note": "VerifyMail identifies jetable.org as disposable and attributes it to YOPmail.",
+    "provider": "YOPmail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "jjk.app",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://www.usercheck.com/domain/jjk.app"
+    ],
+    "evidence_note": "UserCheck currently flags jjk.app as a disposable email domain.",
+    "provider": "jjk.app",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "kjkpc.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/kjkpc.net"
+    ],
+    "evidence_note": "VerifyMail identifies kjkpc.net as disposable and attributes its MX infrastructure to 10minutemail.com.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "kuku.lu",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://deviceandbrowserinfo.com/data/emails/domain/details/kuku.lu"
+    ],
+    "evidence_note": "DeviceAndBrowserInfo currently classifies kuku.lu as disposable and reports high fraud risk.",
+    "provider": "m.kuku.lu",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "lisemala.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://lisemala.com/"
+    ],
+    "evidence_note": "The operator describes Lisemala as an anonymous, free temporary email service with hourly mailbox expiry.",
+    "provider": "lisemala.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "mailinator.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://mailinator.com/documentation/docs/core/publicmailbox/"
+    ],
+    "evidence_note": "Mailinator documents its public @mailinator.com system as free, disposable, receive-only public inboxes that auto-delete after a few hours.",
+    "provider": "Mailinator",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "moakt.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://moakt.com/en/terms"
+    ],
+    "evidence_note": "Moakt's own terms identify the service as a temporary disposable email service.",
+    "provider": "Moakt",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "mohmal.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://www.mohmal.com/en"
+    ],
+    "evidence_note": "Mohmal describes itself as a temporary disposable email service with addresses that expire after 45 minutes.",
+    "provider": "Mohmal",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "nicemail.cc",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://nicemail.cc/ar"
+    ],
+    "evidence_note": "NiceMail describes itself as a free temporary email service with anonymous, disposable inboxes.",
+    "provider": "NiceMail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "onldm.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/onldm.net"
+    ],
+    "evidence_note": "VerifyMail identifies onldm.net as disposable and attributes its MX infrastructure to 10minutemail.com.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "snaper24.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://snaper24.com/"
+    ],
+    "evidence_note": "Snaper24 advertises a temporary email service whose generated addresses expire after 10 minutes.",
+    "provider": "Snaper24",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "temp-mail.io",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://temp-mail.io/en"
+    ],
+    "evidence_note": "Temp Mail describes its service as disposable, anonymous email with a limited lifetime and automatic deletion.",
+    "provider": "Temp Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "temp-mail.org",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://temp-mail.org/en"
+    ],
+    "evidence_note": "Temp-Mail describes its service as a free, secure, anonymous disposable email address that self-destructs.",
+    "provider": "Temp-Mail",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "temp-mail.sh",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://hypestat.com/info/temp-mail.sh"
+    ],
+    "evidence_note": "The current site profile identifies temp-mail.sh as a temporary disposable email service designed to beat spam.",
+    "provider": "Temp-mail.sh",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "tempo.mintraccoon.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://www.usercheck.com/provider/tempo.mintraccoon.com"
+    ],
+    "evidence_note": "UserCheck currently identifies tempo.mintraccoon.com as a temporary email provider.",
+    "provider": "Tempo",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "vhm.cc",
+    "classification": "unknown",
+    "confidence": "low",
+    "source_urls": [
+      "https://www.mailboxvalidator.com/domain/vhm.cc"
+    ],
+    "evidence_note": "MailboxValidator currently reports vhm.cc as active but not disposable; retained as a disputed review candidate and not blocked.",
+    "provider": null,
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "disputed"
+  },
+  {
     "domain": "vtmpj.com",
     "classification": "disposable",
     "confidence": "high",
     "source_urls": [
       "https://verifymail.io/domain/vtmpj.com"
     ],
-    "evidence_note": "VerifyMail identifies the domain as disposable, reports a valid mail server, and attributes the provider to 10minutemail.com.",
+    "evidence_note": "VerifyMail identifies vtmpj.com as disposable, reports a valid mail server, and attributes the provider to 10minutemail.com.",
     "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "vtmpj.net",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://verifymail.io/domain/vtmpj.net"
+    ],
+    "evidence_note": "VerifyMail identifies vtmpj.net as disposable and attributes its MX infrastructure to 10minutemail.com.",
+    "provider": "10minutemail.com",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "with.lt",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://with.lt/"
+    ],
+    "evidence_note": "The operator describes with.lt as a free temporary, anonymous, one-time email service with hourly address expiry.",
+    "provider": "with.lt",
+    "first_seen": "2026-08-27",
+    "last_verified": "2026-08-27",
+    "block_subdomains": true,
+    "status": "active"
+  },
+  {
+    "domain": "yopmail.com",
+    "classification": "disposable",
+    "confidence": "high",
+    "source_urls": [
+      "https://yopmail.com/"
+    ],
+    "evidence_note": "YOPmail explicitly offers anonymous disposable inboxes with no registration and automatic public inbox creation.",
+    "provider": "YOPmail",
     "first_seen": "2026-08-27",
     "last_verified": "2026-08-27",
     "block_subdomains": true,

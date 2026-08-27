@@ -59,9 +59,9 @@ node cli/dist/bin.js check user@gmail.com --json</code></pre>
     </section>
 
     <section aria-labelledby="blocked"><h2 id="blocked">Which disposable email domains are blocked?</h2>
-      <div class="answer"><strong>Current verified blocklist:</strong> <code>vtmpj.com</code> and any subdomain such as <code>mail.vtmpj.com</code>. This initial release intentionally publishes only independently evidenced records; it is not presented as an exhaustive list yet.</div>
-      <table><thead><tr><th>Domain</th><th>Match</th><th>Classification</th><th>Confidence</th><th>Evidence</th></tr></thead><tbody><tr><td><code>vtmpj.com</code></td><td>exact + subdomains</td><td>disposable</td><td>high</td><td><a href="https://verifymail.io/domain/vtmpj.com">VerifyMail report</a></td></tr></tbody></table>
-      <p class="muted">The canonical machine-readable list is <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/data/domains.txt">domains.txt</a>; records not marked active disposable with medium/high confidence are not blocked by default.</p>
+      <div class="answer"><strong>Current verified blocklist:</strong> 33 active domains are blocked exactly and for all subdomains. For example, <code>mail.vtmpj.com</code> is blocked because <code>vtmpj.com</code> has <code>block_subdomains=true</code>.</div>
+      <p class="domain-list" aria-label="Current blocked domains"><code>10minutemail.com</code> · <code>10minutemail.one</code> · <code>cazlp.com</code> · <code>crazymailing.com</code> · <code>dustbin.one</code> · <code>emailnator.com</code> · <code>gonrr.net</code> · <code>guerrillamail.com</code> · <code>guerrillamail.de</code> · <code>guerrillamail.net</code> · <code>guerrillamail.org</code> · <code>guerrillamailblock.com</code> · <code>jbsze.com</code> · <code>jbsze.net</code> · <code>jetable.org</code> · <code>jjk.app</code> · <code>kjkpc.net</code> · <code>kuku.lu</code> · <code>lisemala.com</code> · <code>mailinator.com</code> · <code>moakt.com</code> · <code>mohmal.com</code> · <code>nicemail.cc</code> · <code>onldm.net</code> · <code>snaper24.com</code> · <code>temp-mail.io</code> · <code>temp-mail.org</code> · <code>temp-mail.sh</code> · <code>tempo.mintraccoon.com</code> · <code>vtmpj.com</code> · <code>vtmpj.net</code> · <code>with.lt</code> · <code>yopmail.com</code></p>
+      <p class="muted">Each active record has a source URL and evidence note in <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/data/domains.json">domains.json</a>. <code>vhm.cc</code> and <code>imail7.net</code> remain disputed review candidates and are not blocked. Wildcards such as <code>guerrillamail.*</code> are represented as explicit, evidenced hostnames rather than an unsafe blanket wildcard. The canonical machine-readable list is <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/data/domains.txt">domains.txt</a>.</p>
     </section>
 
     <section aria-labelledby="integrations"><h2 id="integrations">Integration guides</h2>
@@ -78,7 +78,7 @@ node cli/dist/bin.js check user@gmail.com --json</code></pre>
       <details><summary>Where should blocking happen?</summary><p>At a server route, auth hook, or database boundary. Browser validation is useful feedback but is not a security boundary.</p></details>
     </section>
 
-    <section aria-labelledby="freshness"><h2 id="freshness">Data freshness</h2><p class="muted">Dataset version <code>2026.08.27.1</code> · last verified <time datetime="2026-08-27">2026-08-27</time> · 1 evidence-backed active record in the initial seed.</p></section>
+    <section aria-labelledby="freshness"><h2 id="freshness">Data freshness</h2><p class="muted">Dataset version <code>2026.08.27.2</code> · last verified <time datetime="2026-08-27">2026-08-27</time> · 33 evidence-backed active records.</p></section>
   </main>
   <footer>Disposable Email Domain Blocklist · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/CONTRIBUTING.md">Contribute evidence</a> · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/SECURITY.md">Security</a></footer>
 </body>
