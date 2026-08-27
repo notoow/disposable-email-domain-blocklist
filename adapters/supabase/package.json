@@ -1,0 +1,19 @@
+{
+  "name": "@internal/disposable-email-supabase",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@internal/disposable-email-core": "workspace:*"
+  },
+  "files": ["dist"]
+}
+

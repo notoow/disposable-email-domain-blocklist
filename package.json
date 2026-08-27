@@ -1,0 +1,25 @@
+{
+  "name": "disposable-email-domain-blocklist-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "data:check": "node scripts/normalize-data.mjs --check",
+    "data:write": "node scripts/normalize-data.mjs --write",
+    "agents:generate": "node scripts/generate-adapters.mjs",
+    "site:check": "node scripts/site-check.mjs",
+    "test": "pnpm data:check && pnpm agents:generate && pnpm build && tsx --test scripts/*.test.mjs packages/*/test/*.test.ts adapters/*/test/*.test.ts cli/test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "pnpm agents:generate && tsc -p packages/core/tsconfig.build.json && tsc -p adapters/supabase/tsconfig.json && tsc -p cli/tsconfig.json",
+    "check": "pnpm test && pnpm typecheck && pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

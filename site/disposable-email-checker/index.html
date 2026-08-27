@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disposable Email Checker for Developers | TypeScript and CLI</title>
+  <meta name="description" content="Check whether an email or domain is disposable with a network-free TypeScript matcher and stable CLI JSON output.">
+  <link rel="canonical" href="https://notoow.github.io/disposable-email-domain-blocklist/disposable-email-checker/">
+  <meta property="og:title" content="Disposable Email Checker for Developers"><meta property="og:description" content="Network-free disposable email checks with evidence and safe default policies."><meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Disposable Email Checker for Developers","description":"Network-free TypeScript and CLI checks for disposable email domains.","url":"https://notoow.github.io/disposable-email-domain-blocklist/disposable-email-checker/","author":{"@type":"Organization","name":"Disposable Email Domain Blocklist"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://notoow.github.io/disposable-email-domain-blocklist/"},{"@type":"ListItem","position":2,"name":"Disposable Email Checker"}]}}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head><body>
+  <header><a class="brand" href="../">Disposable Email Domain Blocklist</a><nav aria-label="Primary"><a href="../disposable-email-domain-blocklist/">Dataset</a><a href="../supabase-disposable-email-blocker/">Supabase</a><a href="../nextjs-disposable-email-validation/">Next.js</a><a href="https://github.com/notoow/disposable-email-domain-blocklist">GitHub</a></nav></header>
+  <main><p class="eyebrow">Developer tool · no network call</p><h1>Disposable Email Checker</h1><p class="lede">Check an email address or domain locally, return the matched evidence record, and keep the server-side policy deterministic.</p>
+    <div class="answer"><strong>Answer:</strong> call <code>isDisposableEmail(email)</code> on the server. It returns true only for an active disposable record with medium or high confidence; malformed input is reported separately as <code>invalid_input</code>.</div>
+    <h2>CLI</h2><pre><code>node cli/dist/bin.js check user@vtmpj.com
+# BLOCKED vtmpj.com (disposable, confidence=high, match=exact)
+
+node cli/dist/bin.js check user@gmail.com --json</code></pre>
+    <h2>TypeScript</h2><pre><code>import { isDisposableEmail, classifyEmail } from '@internal/disposable-email-core'
+
+if (isDisposableEmail(email)) {
+  throw new Error('SIGNUP_EMAIL_NOT_ALLOWED')
+}
+
+const result = classifyEmail(email)
+// result.record.source_urls explains why a listed domain matched</code></pre>
+    <h2>Stable JSON fields</h2><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>blocked</code></td><td>Policy decision; a blocked decision still exits 0.</td></tr><tr><td><code>classification</code></td><td>disposable, alias, role, free_provider, unknown, or unlisted.</td></tr><tr><td><code>matched_domain</code></td><td>The exact or most-specific suffix record that matched.</td></tr><tr><td><code>reason</code></td><td>Short human-readable explanation safe for diagnostics.</td></tr></tbody></table>
+    <h2>Do not confuse validation with verification</h2><p>The checker does not probe SMTP, prove mailbox ownership, or score fraud. Keep rate limits, CAPTCHA, email verification, and provider controls as separate layers.</p>
+    <p><a class="cta" href="../nextjs-disposable-email-validation/">Add it to Next.js →</a><a class="cta secondary" href="../supabase-disposable-email-blocker/">Use Supabase Hook</a></p>
+  </main><footer><a href="../">Home</a> · Dataset v2026.08.27.1</footer>
+</body></html>
+

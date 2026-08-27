@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disposable Email Domain Blocklist | Evidence-backed signup protection</title>
+  <meta name="description" content="Disposable Email Domain Blocklist for developers: evidence-backed domain data, TypeScript checks, CLI, and Supabase signup protection.">
+  <link rel="canonical" href="https://notoow.github.io/disposable-email-domain-blocklist/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Disposable Email Domain Blocklist">
+  <meta property="og:description" content="Block disposable email signups at the server boundary with evidence-backed data.">
+  <meta property="og:url" content="https://notoow.github.io/disposable-email-domain-blocklist/">
+  <meta property="og:site_name" content="Disposable Email Domain Blocklist">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"WebSite","@id":"https://notoow.github.io/disposable-email-domain-blocklist/#website","url":"https://notoow.github.io/disposable-email-domain-blocklist/","name":"Disposable Email Domain Blocklist","description":"Evidence-backed disposable email domain data and signup-boundary integrations."},
+      {"@type":"SoftwareApplication","@id":"https://notoow.github.io/disposable-email-domain-blocklist/#software","name":"Disposable Email Domain Blocklist","applicationCategory":"DeveloperApplication","operatingSystem":"Node.js","isAccessibleForFree":true,"license":"https://github.com/notoow/disposable-email-domain-blocklist/blob/main/LICENSE","codeRepository":"https://github.com/notoow/disposable-email-domain-blocklist","softwareVersion":"0.0.0","description":"Evidence-backed disposable email domain data, TypeScript matcher, CLI, and Supabase adapter."},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://notoow.github.io/disposable-email-domain-blocklist/"}]},
+      {"@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"What is a disposable email domain blocklist?","acceptedAnswer":{"@type":"Answer","text":"It is a maintained set of email domains associated with temporary mailboxes, used to stop disposable email signups at a server or database boundary."}},
+        {"@type":"Question","name":"Does this block Gmail or Yahoo?","acceptedAnswer":{"@type":"Answer","text":"No. Gmail, Yahoo, ordinary free providers, aliases, and unknown domains are allowed by default. Only active disposable records with medium or high confidence are blocked."}},
+        {"@type":"Question","name":"Where should disposable email blocking happen?","acceptedAnswer":{"@type":"Answer","text":"Blocking should happen before account creation in a server route, authentication hook, or database policy. Browser validation is only a user-experience aid."}}
+      ]}
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./">Disposable Email Domain Blocklist</a>
+    <nav aria-label="Primary"><a href="disposable-email-domain-blocklist/">Dataset</a><a href="disposable-email-checker/">Checker</a><a href="supabase-disposable-email-blocker/">Supabase</a><a href="nextjs-disposable-email-validation/">Next.js</a><a href="https://github.com/notoow/disposable-email-domain-blocklist">GitHub</a></nav>
+  </header>
+  <main>
+    <p class="eyebrow">Open source developer protection · dataset v2026.08.27.1</p>
+    <h1>Disposable Email Domain Blocklist</h1>
+    <p class="lede">Stop throwaway signups at the boundary that matters. Use evidence-backed domain records, a network-free TypeScript matcher, a CLI, and safe Supabase SQL generation.</p>
+    <div class="answer"><strong>Short answer:</strong> block only active disposable domains with medium or high confidence, keep an explicit allowlist for reviewed exceptions, and enforce the decision on the server before creating the user.</div>
+    <a class="cta" href="https://github.com/notoow/disposable-email-domain-blocklist">View the source on GitHub →</a>
+    <a class="cta secondary" href="disposable-email-checker/">Check a domain →</a>
+
+    <section aria-labelledby="why"><h2 id="why">What developers get</h2>
+      <div class="grid">
+        <article class="card"><h3>Evidence, not mystery strings</h3><p class="muted">Every active disposable record carries a source URL, evidence note, provider attribution when known, and verification dates.</p></article>
+        <article class="card"><h3>Server-side by default</h3><p class="muted">Use the same policy in Node, Next.js, or a Supabase Before User Created Hook. Client checks never replace enforcement.</p></article>
+        <article class="card"><h3>False positives are a policy choice</h3><p class="muted">Alias, role, free-provider, low-confidence, disputed, and unknown records are not blocked by default.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="quick"><h2 id="quick">60-second quickstart</h2>
+      <pre><code>pnpm install
+pnpm check
+node cli/dist/bin.js check user@vtmpj.com
+node cli/dist/bin.js check user@gmail.com --json</code></pre>
+      <p>The current seed blocks <code>vtmpj.com</code> and its subdomains. An unlisted <code>gmail.com</code> result is allowed. See the <a href="disposable-email-checker/">checker guide</a> for the stable JSON contract.</p>
+    </section>
+
+    <section aria-labelledby="integrations"><h2 id="integrations">Integration guides</h2>
+      <div class="grid">
+        <article class="card"><h3><a href="supabase-disposable-email-blocker/">Supabase disposable email blocker</a></h3><p>Preview a private-schema, RLS-protected Before User Created migration. No remote database is changed by the generator.</p></article>
+        <article class="card"><h3><a href="nextjs-disposable-email-validation/">Next.js disposable email validation</a></h3><p>Put the matcher in a route handler or server action, then return a stable public error code.</p></article>
+        <article class="card"><h3><a href="https://github.com/notoow/disposable-email-domain-blocklist/tree/main/agent-integration">AI coding agent workflow</a></h3><p>Install the same server-boundary and approval rules for Codex, Claude Code, and Cursor.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq"><h2 id="faq">Frequently asked questions</h2>
+      <details><summary>What is a disposable email domain blocklist?</summary><p>It is a maintained set of domains associated with temporary mailboxes, used to stop disposable email signups before an account is created.</p></details>
+      <details><summary>Does this block Gmail or Yahoo?</summary><p>No. Ordinary free providers, aliases, and unknown domains are allowed by default. Only active disposable records with medium/high confidence are blocked.</p></details>
+      <details><summary>Where should blocking happen?</summary><p>At a server route, auth hook, or database boundary. Browser validation is useful feedback but is not a security boundary.</p></details>
+    </section>
+
+    <section aria-labelledby="freshness"><h2 id="freshness">Data freshness</h2><p class="muted">Dataset version <code>2026.08.27.1</code> · last verified <time datetime="2026-08-27">2026-08-27</time> · 1 evidence-backed active record in the initial seed.</p></section>
+  </main>
+  <footer>Disposable Email Domain Blocklist · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/CONTRIBUTING.md">Contribute evidence</a> · <a href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/SECURITY.md">Security</a></footer>
+</body>
+</html>
+

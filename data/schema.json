@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/notoow/disposable-email-domain-blocklist/raw/main/data/schema.json",
+  "title": "Disposable Email Domain Blocklist dataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dataset_version", "updated_at", "records"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "dataset_version": { "type": "string", "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}\\.[1-9][0-9]*$" },
+    "updated_at": { "type": "string", "format": "date" },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/domainRecord" }
+    }
+  },
+  "$defs": {
+    "domainRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "classification",
+        "confidence",
+        "source_urls",
+        "evidence_note",
+        "provider",
+        "first_seen",
+        "last_verified",
+        "block_subdomains",
+        "status"
+      ],
+      "properties": {
+        "domain": {
+          "type": "string",
+          "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$"
+        },
+        "classification": {
+          "enum": ["disposable", "alias", "role", "free_provider", "unknown"]
+        },
+        "confidence": { "enum": ["low", "medium", "high"] },
+        "source_urls": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "format": "uri", "pattern": "^https://" }
+        },
+        "evidence_note": { "type": "string", "minLength": 1 },
+        "provider": { "type": ["string", "null"] },
+        "first_seen": { "type": "string", "format": "date" },
+        "last_verified": { "type": "string", "format": "date" },
+        "block_subdomains": { "type": "boolean" },
+        "status": { "enum": ["active", "stale", "disputed", "removed"] }
+      }
+    }
+  }
+}
+

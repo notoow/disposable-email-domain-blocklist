@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next.js Disposable Email Validation | Server Route Example</title>
+  <meta name="description" content="Add disposable email validation to a Next.js route handler with a server-side TypeScript matcher and stable signup error code.">
+  <link rel="canonical" href="https://notoow.github.io/disposable-email-domain-blocklist/nextjs-disposable-email-validation/">
+  <meta property="og:title" content="Next.js Disposable Email Validation"><meta property="og:description" content="Server-side disposable email blocking for Next.js signup routes."><meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Next.js Disposable Email Validation","description":"Server-side disposable email blocking for Next.js signup routes.","url":"https://notoow.github.io/disposable-email-domain-blocklist/nextjs-disposable-email-validation/","author":{"@type":"Organization","name":"Disposable Email Domain Blocklist"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://notoow.github.io/disposable-email-domain-blocklist/"},{"@type":"ListItem","position":2,"name":"Next.js Disposable Email Validation"}]}}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head><body>
+  <header><a class="brand" href="../">Disposable Email Domain Blocklist</a><nav aria-label="Primary"><a href="../disposable-email-domain-blocklist/">Dataset</a><a href="../disposable-email-checker/">Checker</a><a href="../supabase-disposable-email-blocker/">Supabase</a><a href="https://github.com/notoow/disposable-email-domain-blocklist">GitHub</a></nav></header>
+  <main><p class="eyebrow">Next.js integration · server route</p><h1>Next.js disposable email validation</h1><p class="lede">Put the check in a route handler or server action so a caller cannot bypass it by skipping your browser UI.</p>
+    <div class="answer"><strong>Answer:</strong> validate the email at <code>app/api/signup/route.ts</code> before calling your Auth provider. Return a stable public code and keep provider stack details out of the response.</div>
+    <h2>Route handler</h2><pre><code>import { NextResponse } from 'next/server'
+import { isDisposableEmail } from '@internal/disposable-email-core'
+
+export async function POST(request: Request) {
+  const body = (await request.json()) as { email?: unknown }
+  const email = typeof body.email === 'string' ? body.email : ''
+
+  if (isDisposableEmail(email)) {
+    return NextResponse.json(
+      { code: 'SIGNUP_EMAIL_NOT_ALLOWED' },
+      { status: 400 }
+    )
+  }
+
+  return NextResponse.json({ accepted: true })
+}</code></pre>
+    <h2>Implementation checklist</h2><ol><li>Keep the matcher on the server; the browser check is only UX.</li><li>Handle <code>invalid_input</code> separately from a disposable match.</li><li>Keep an allowlist for reviewed exceptions.</li><li>Retain rate limits, CAPTCHA, email verification, and provider abuse controls.</li><li>Test both <code>user@vtmpj.com</code> and <code>user@gmail.com</code>.</li></ol>
+    <p><a class="cta" href="../disposable-email-checker/">See the JSON contract →</a><a class="cta secondary" href="https://github.com/notoow/disposable-email-domain-blocklist/blob/main/docs/nextjs-disposable-email-validation.md">Source guide</a></p>
+  </main><footer><a href="../">Home</a> · Server boundary required</footer>
+</body></html>
+

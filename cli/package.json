@@ -1,0 +1,14 @@
+{
+  "name": "@internal/disposable-email-cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "disposable-email": "./dist/bin.js"
+  },
+  "dependencies": {
+    "@internal/disposable-email-core": "workspace:*",
+    "@internal/disposable-email-supabase": "workspace:*"
+  },
+  "files": ["dist"]
+}

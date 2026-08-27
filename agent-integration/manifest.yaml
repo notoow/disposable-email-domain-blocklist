@@ -1,0 +1,13 @@
+version: 0.1.0
+canonical_instructions: agent-integration/instructions.md
+targets:
+  codex:
+    path: .codex/skills/disposable-email-blocklist/SKILL.md
+    format: skill-md
+  claude:
+    path: .claude/skills/disposable-email-blocklist/SKILL.md
+    format: skill-md
+  cursor:
+    path: .cursor/rules/disposable-email-blocklist.mdc
+    format: cursor-mdc
+

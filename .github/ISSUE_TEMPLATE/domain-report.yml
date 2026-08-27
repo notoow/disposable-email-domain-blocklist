@@ -1,0 +1,34 @@
+name: Domain report
+description: Report a disposable domain with reproducible evidence
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: Lowercase ASCII hostname only.
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: HTTPS evidence URL
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Evidence note
+      description: Explain what the source establishes and when you checked it.
+    validations:
+      required: true
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Classification
+      options:
+        - disposable
+        - alias
+        - unknown
+    validations:
+      required: true
+

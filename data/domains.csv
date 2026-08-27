@@ -1,0 +1,2 @@
+domain,classification,confidence,provider,first_seen,last_verified,block_subdomains,status,source_urls,evidence_note
+"vtmpj.com","disposable","high","10minutemail.com","2026-08-27","2026-08-27","true","active","https://verifymail.io/domain/vtmpj.com","VerifyMail identifies the domain as disposable, reports a valid mail server, and attributes the provider to 10minutemail.com."

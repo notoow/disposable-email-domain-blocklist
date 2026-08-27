@@ -1,0 +1,17 @@
+name: False positive or removal request
+description: Request review of a domain classification
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and evidence
+      description: Explain why the current classification is inaccurate or harmful. Do not include personal data.
+    validations:
+      required: true
+

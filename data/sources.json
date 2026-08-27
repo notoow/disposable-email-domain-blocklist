@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "url": "https://verifymail.io/domain/vtmpj.com",
+      "publisher": "VerifyMail",
+      "evidence_type": "provider_attribution",
+      "checked_at": "2026-08-27",
+      "redistribution_review": "record_facts_only",
+      "note": "The domain page identifies vtmpj.com as disposable and attributes it to 10minutemail.com. No third-party bulk list was copied."
+    }
+  ]
+}
+
